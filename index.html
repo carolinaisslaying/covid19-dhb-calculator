@@ -1,0 +1,281 @@
+<!doctype HTML>
+<html lang="en-NZ">
+    <head>
+        <title>COVID-19 DHB Statistics Calculator</title>
+    </head>
+    <body>
+        <h1>COVID-19 DHB Statistics Calculator</h1>
+        <p>This site allows you to easily calculate x data per 100,000 residents for each DHB.</p>
+        <p>DHB population data based on source [1], Total population data based on source [2].</p>
+        <div class="table-responsive"><table class="table-style-two table">
+            <thead>
+                <tr>
+                    <th scope="col">DHB</th>
+                    <th scope="col">Active</th>
+                    <th scope="col">Recovered</th>
+                    <th scope="col">Deceased</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td nowrap="nowrap">Auckland</td>
+                    <td><input type="text" id="auckland-active" name="auckland-active"></td>
+                    <td><input type="text" id="auckland-recovered" name="auckland-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="auckland-dead" name="auckland-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="auckland-total" name="auckland-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Bay of Plenty</td>
+                    <td><input type="text" id="bop-active" name="bop-active"></td>
+                    <td><input type="text" id="bop-recovered" name="bop-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="bop-dead" name="bop-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="bop-total" name="bop-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Canterbury</td>
+                    <td><input type="text" id="canterbury-active" name="canterbury-active"></td>
+                    <td><input type="text" id="canterbury-recovered" name="canterbury-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="canterbury-dead" name="canterbury-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="canterbury-total" name="canterbury-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Capital and Coast</td>
+                    <td><input type="text" id="cac-active" name="cac-active"></td>
+                    <td><input type="text" id="cac-recovered" name="cac-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="cac-dead" name="cac-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="cac-total" name="cac-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Counties Manukau</td>
+                    <td><input type="text" id="cm-active" name="cm-active"></td>
+                    <td><input type="text" id="cm-recovered" name="cm-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="cm-dead" name="cm-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="cm-total" name="cm-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Hawke's Bay</td>
+                    <td><input type="text" id="hb-active" name="hb-active"></td>
+                    <td><input type="text" id="hb-recovered" name="hb-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="hb-dead" name="hb-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="hb-total" name="hb-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Hutt Valley</td>
+                    <td><input type="text" id="hv-active" name="hv-active"></td>
+                    <td><input type="text" id="hv-recovered" name="hv-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="hv-dead" name="hv-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="hv-total" name="hv-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Lakes</td>
+                    <td><input type="text" id="lakes-active" name="lakes-active"></td>
+                    <td><input type="text" id="lakes-recovered" name="lakes-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="lakes-dead" name="lakes-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="lakes-total" name="lakes-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Mid Central</td>
+                    <td><input type="text" id="mc-active" name="mc-active"></td>
+                    <td><input type="text" id="mc-recovered" name="mc-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="mc-dead" name="mc-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="mc-total" name="mc-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Nelson Marlborough</td>
+                    <td><input type="text" id="nm-active" name="nm-active"></td>
+                    <td><input type="text" id="nm-recovered" name="nm-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="nm-dead" name="nm-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="nm-total" name="nm-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Northland</td>
+                    <td><input type="text" id="north-active" name="north-active"></td>
+                    <td><input type="text" id="north-recovered" name="north-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="north-dead" name="north-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="north-total" name="north-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">South Canterbury</td>
+                    <td><input type="text" id="sc-active" name="sc-active"></td>
+                    <td><input type="text" id="sc-recovered" name="sc-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="sc-dead" name="sc-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="sc-total" name="sc-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Southern</td>
+                    <td><input type="text" id="south-active" name="south-active"></td>
+                    <td><input type="text" id="south-recovered" name="south-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="south-dead" name="south-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="south-total" name="south-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Tairāwhiti</td>
+                    <td><input type="text" id="tai-active" name="tai-active"></td>
+                    <td><input type="text" id="tai-recovered" name="tai-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="tai-dead" name="tai-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="tai-total" name="tai-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Taranaki</td>
+                    <td><input type="text" id="tar-active" name="tar-active"></td>
+                    <td><input type="text" id="tar-recovered" name="tar-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="tar-dead" name="tar-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="tar-total" name="tar-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Waikato</td>
+                    <td><input type="text" id="wai-active" name="wai-active"></td>
+                    <td><input type="text" id="wai-recovered" name="wai-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="wai-dead" name="wai-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="wai-total" name="wai-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Wairarapa</td>
+                    <td><input type="text" id="rapa-active" name="rapa-active"></td>
+                    <td><input type="text" id="rapa-recovered" name="rapa-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="rapa-dead" name="rapa-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="rapa-total" name="rapa-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Waitematā</td>
+                    <td><input type="text" id="mata-active" name="mata-active"></td>
+                    <td><input type="text" id="mata-recovered" name="mata-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="mata-dead" name="mata-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="mata-total" name="mata-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">West Coast</td>
+                    <td><input type="text" id="west-active" name="west-active"></td>
+                    <td><input type="text" id="west-recovered" name="west-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="west-dead" name="west-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="west-total" name="west-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Whanganui</td>
+                    <td><input type="text" id="whan-active" name="whan-active"></td>
+                    <td><input type="text" id="whan-recovered" name="whan-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="whan-dead" name="whan-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="whan-total" name="whan-total"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap"><strong>Total</strong></td>
+                    <td><input type="text" id="total-active" name="total-active"></td>
+                    <td><input type="text" id="total-recovered" name="total-recovered"></td>
+                    <td nowrap="nowrap"><input type="text" id="total-dead" name="total-dead"></td>
+                    <td nowrap="nowrap"><input type="text" id="total-total" name="total-total"></td>
+                </tr>
+            </tbody>
+        </table></div>
+        <button onclick="calculate();">Calculate</button>
+        <br />
+        <div>
+            <h4>Sources</h4>
+            [1] <a href="http://nzdotstat.stats.govt.nz/wbos/Index.aspx?DataSetCode=TABLECODE7509">http://nzdotstat.stats.govt.nz/wbos/Index.aspx?DataSetCode=TABLECODE7509</a>
+            <br />
+            [2] <a href="https://www.stats.govt.nz/information-releases/national-population-estimates-at-30-june-2020">https://www.stats.govt.nz/information-releases/national-population-estimates-at-30-june-2020</a>    
+        </div>
+        <script type="text/javascript">
+            const dhbs = [
+                {
+                    name: "auckland",
+                    population: 624700
+                },
+                {
+                    name: "bop",
+                    population: 256100
+                },
+                {
+                    name: "canterbury",
+                    population: 569700
+                },
+                {
+                    name: "cac",
+                    population: 319400
+                },
+                {
+                    name: "cm",
+                    population: 579200
+                },
+                {
+                    name: "hb",
+                    population: 175000
+                },
+                {
+                    name: "hv",
+                    population: 155900
+                },
+                {
+                    name: "lakes",
+                    population: 115100
+                },
+                {
+                    name: "mc",
+                    population: 184200
+                },
+                {
+                    name: "nm",
+                    population: 158100
+                },
+                {
+                    name: "north",
+                    population: 189600
+                },
+                {
+                    name: "sc",
+                    population: 61400
+                },
+                {
+                    name: "south", 
+                    population: 343000
+                },
+                {
+                    name: "tai",
+                    population: 50100
+                },
+                {
+                    name: "tar",
+                    population: 122900
+                },
+                {
+                    name: "wai",
+                    population: 428900
+                },
+                {
+                    name: "rapa",
+                    population: 47700
+                },
+                {
+                    name: "mata",
+                    population: 624700
+                },
+                {
+                    name: "west",
+                    population: 32300
+                },
+                {
+                    name: "whan",
+                    population: 67400
+                },
+                {
+                    name: "total",
+                    population: 5025000 // Calculated from a different source than the others (may be slightly inaccurate).
+                }
+            ]
+            
+            function calculate() {
+                for (const dhb of dhbs) {
+                    (document.getElementById(`${dhb.name}-active`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-active`).value / dhb.population) * 100000;
+                    (document.getElementById(`${dhb.name}-recovered`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-recovered`).value / dhb.population) * 100000;
+                    (document.getElementById(`${dhb.name}-dead`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-dead`).value / dhb.population) * 100000;
+                    (document.getElementById(`${dhb.name}-total`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-total`).value / dhb.population) * 100000;
+                }
+            }
+        </script>
+        <style>
+            h4 {
+                margin-block-end: 0.25em;
+            }
+        </style>
+    </body>
+</html>
