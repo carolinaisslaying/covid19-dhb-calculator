@@ -7,6 +7,8 @@
         <h1>COVID-19 DHB Statistics Calculator</h1>
         <p>This site allows you to easily calculate x data per 100,000 residents for each DHB.</p>
         <p>DHB population data based on source [1], Total population data based on source [2].</p>
+        <br />
+        <h2>Cases</h2>
         <div class="table-responsive"><table class="table-style-two table">
             <thead>
                 <tr>
@@ -167,7 +169,148 @@
                 </tr>
             </tbody>
         </table></div>
-        <button onclick="calculate();">Calculate</button>
+        <button onclick="calculateCASE();">Calculate</button>
+        <br />
+        <h2>Vaccinations</h2>
+        <div class="table-responsive"><table class="table-style-two table">
+            <thead>
+                <tr>
+                    <th scope="col">DHB</th>
+                    <th scope="col">Dose 1</th>
+                    <th scope="col">Dose 2</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td nowrap="nowrap">Auckland</td>
+                    <td><input type="text" id="auckland-dose1" name="auckland-dose1"></td>
+                    <td><input type="text" id="auckland-dose2" name="auckland-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="auckland-total-dose" name="auckland-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Bay of Plenty</td>
+                    <td><input type="text" id="bop-dose1" name="bop-dose1"></td>
+                    <td><input type="text" id="bop-dose2" name="bop-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="bop-total-dose" name="bop-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Canterbury</td>
+                    <td><input type="text" id="canterbury-dose1" name="canterbury-dose1"></td>
+                    <td><input type="text" id="canterbury-dose2" name="canterbury-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="canterbury-total-dose" name="canterbury-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Capital and Coast</td>
+                    <td><input type="text" id="cac-dose1" name="cac-dose1"></td>
+                    <td><input type="text" id="cac-dose2" name="cac-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="cac-total-dose" name="cac-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Counties Manukau</td>
+                    <td><input type="text" id="cm-dose1" name="cm-dose1"></td>
+                    <td><input type="text" id="cm-dose2" name="cm-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="cm-total-dose" name="cm-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Hawke's Bay</td>
+                    <td><input type="text" id="hb-dose1" name="hb-dose1"></td>
+                    <td><input type="text" id="hb-dose2" name="hb-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="hb-total-dose" name="hb-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Hutt Valley</td>
+                    <td><input type="text" id="hv-dose1" name="hv-dose1"></td>
+                    <td><input type="text" id="hv-dose2" name="hv-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="hv-total-dose" name="hv-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Lakes</td>
+                    <td><input type="text" id="lakes-dose1" name="lakes-dose1"></td>
+                    <td><input type="text" id="lakes-dose2" name="lakes-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="lakes-total-dose" name="lakes-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Mid Central</td>
+                    <td><input type="text" id="mc-dose1" name="mc-dose1"></td>
+                    <td><input type="text" id="mc-dose2" name="mc-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="mc-total-dose" name="mc-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Nelson Marlborough</td>
+                    <td><input type="text" id="nm-dose1" name="nm-dose1"></td>
+                    <td><input type="text" id="nm-dose2" name="nm-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="nm-total-dose" name="nm-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Northland</td>
+                    <td><input type="text" id="north-dose1" name="north-dose1"></td>
+                    <td><input type="text" id="north-dose2" name="north-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="north-total-dose" name="north-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">South Canterbury</td>
+                    <td><input type="text" id="sc-dose1" name="sc-dose1"></td>
+                    <td><input type="text" id="sc-dose2" name="sc-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="sc-total-dose" name="sc-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Southern</td>
+                    <td><input type="text" id="south-dose1" name="south-dose1"></td>
+                    <td><input type="text" id="south-dose2" name="south-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="south-total-dose" name="south-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Tairāwhiti</td>
+                    <td><input type="text" id="tai-dose1" name="tai-dose1"></td>
+                    <td><input type="text" id="tai-dose2" name="tai-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="tai-total-dose" name="tai-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Taranaki</td>
+                    <td><input type="text" id="tar-dose1" name="tar-dose1"></td>
+                    <td><input type="text" id="tar-dose2" name="tar-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="tar-total-dose" name="tar-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Waikato</td>
+                    <td><input type="text" id="wai-dose1" name="wai-dose1"></td>
+                    <td><input type="text" id="wai-dose2" name="wai-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="wai-total-dose" name="wai-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Wairarapa</td>
+                    <td><input type="text" id="rapa-dose1" name="rapa-dose1"></td>
+                    <td><input type="text" id="rapa-dose2" name="rapa-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="rapa-total-dose" name="rapa-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Waitematā</td>
+                    <td><input type="text" id="mata-dose1" name="mata-dose1"></td>
+                    <td><input type="text" id="mata-dose2" name="mata-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="mata-total-dose" name="mata-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">West Coast</td>
+                    <td><input type="text" id="west-dose1" name="west-dose1"></td>
+                    <td><input type="text" id="west-dose2" name="west-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="west-total-dose" name="west-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap">Whanganui</td>
+                    <td><input type="text" id="whan-dose1" name="whan-dose1"></td>
+                    <td><input type="text" id="whan-dose2" name="whan-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="whan-total-dose" name="whan-total-dose"></td>
+                </tr>
+                <tr>
+                    <td nowrap="nowrap"><strong>Total</strong></td>
+                    <td><input type="text" id="total-dose1" name="total-dose1"></td>
+                    <td><input type="text" id="total-dose2" name="total-dose2"></td>
+                    <td nowrap="nowrap"><input type="text" id="total-total-dose" name="total-total-dose"></td>
+                </tr>
+            </tbody>
+        </table></div>
+        <button onclick="calculateVAC();">Calculate</button>
         <br />
         <div>
             <h4>Sources</h4>
@@ -263,12 +406,20 @@
                 }
             ]
             
-            function calculate() {
+            function calculateCASE() {
                 for (const dhb of dhbs) {
                     (document.getElementById(`${dhb.name}-active`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-active`).value / dhb.population) * 100000;
                     (document.getElementById(`${dhb.name}-recovered`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-recovered`).value / dhb.population) * 100000;
                     (document.getElementById(`${dhb.name}-dead`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-dead`).value / dhb.population) * 100000;
                     (document.getElementById(`${dhb.name}-total`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-total`).value / dhb.population) * 100000;
+                }
+            }
+
+            function calculateVAC() {
+                for (const dhb of dhbs) {
+                    (document.getElementById(`${dhb.name}-dose1`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-dose1`).value / dhb.population) * 100000;
+                    (document.getElementById(`${dhb.name}-dose2`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-dose2`).value / dhb.population) * 100000;
+                    (document.getElementById(`${dhb.name}-total-dose`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-total-dose`).value / dhb.population) * 100000;
                 }
             }
         </script>
