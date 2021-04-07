@@ -419,7 +419,7 @@
                 for (const dhb of dhbs) {
                     (document.getElementById(`${dhb.name}-dose1`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-dose1`).value / dhb.population) * 100000;
                     (document.getElementById(`${dhb.name}-dose2`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-dose2`).value / dhb.population) * 100000;
-                    (document.getElementById(`${dhb.name}-total-dose`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-total-dose`).value / dhb.population) * 100000;
+                    // (document.getElementById(`${dhb.name}-total-dose`).parentNode).innerHTML = (document.getElementById(`${dhb.name}-dose1`).value / dhb.population) * 100000;
                 }
             }
         </script>
